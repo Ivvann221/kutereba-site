@@ -1,0 +1,114 @@
+.gallery {
+    padding-top: 70px;
+    @media screen and (max-width:600px) {
+        padding-top: 20px;
+    }
+}
+
+.slider-gallery {
+    position: relative;
+@media screen and (min-width:1200px) {
+    &:hover .slick-arrow {
+        display: block !important;
+    }
+}
+@media screen and (max-width:1200px) {
+    .slick-arrow {
+        display: block !important;
+    }
+}
+   
+
+    img {
+        width: 100%;
+        height: 200px;
+
+        @media screen and (max-width:850px) {
+            min-width: 100%;
+
+        }
+    }
+
+}
+
+.slick-slide {
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover .slide-hover {
+        display: flex;
+        transition: 0.5s;
+    }
+
+    &:hover {
+        filter: grayscale(60%);
+        transition: 0.5s;
+    }
+
+
+}
+
+.slide-hover {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: none;
+
+
+    &__title {
+        margin-top: 30px;
+    }
+
+    &__subtitle {
+        margin-top: 40px;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+.-margin {
+    margin-left: 0 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+.slick-arrow {
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    display: none !important;
+}
+
+.slick-prev {
+    width: 15px;
+background: url('../img/left.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 45%;
+    left: 5px;
+    z-index: 10;
+
+}
+
+.slick-next {
+    width: 15px;
+    background: url('../img/right.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 45%;
+    right: 5px;
+    z-index: 10;
+
+}

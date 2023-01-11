@@ -1,0 +1,33 @@
+.hero {
+    &__item {
+        width: 50%;
+        order: 1;
+
+        @media screen and (max-width: 576px) {
+            width: 100% !important;
+            order: 2;
+            padding: 40px 30px;
+        }
+    }
+
+    &__img {
+        width: 50%;
+        height: 500px;
+        background-image: url('../img/Beautiful-photos-and-pictures-on-various-subjects-01.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        order: 2;
+
+        @media screen and(max-width: 850px) {
+            height: 400px;
+
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            order: 1;
+            height: 400px;
+        }
+    }
+}
